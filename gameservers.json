@@ -4,6 +4,11 @@
         "Port": "56760",
         "GameName": "Oyun 1"
     },
+        {
+        "Ip": "127.0.0.1",
+        "Port": "2005",
+        "GameName": "Local Oyna"
+    },
     {
         "Ip": "associates-bills.gl.at.ply.gg",
         "Port": "51610",
