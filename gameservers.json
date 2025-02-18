@@ -8,10 +8,5 @@
         "Ip": "associates-bills.gl.at.ply.gg",
         "Port": "51610",
         "GameName": "Server 2 (Bakım)"
-    },
-     {
-        "Ip": "127.0.0.1",
-        "Port": "2005",
-        "GameName": "Tek Kişilik Mod (Geçici)"
     }
 ]
