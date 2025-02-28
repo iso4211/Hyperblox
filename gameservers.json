@@ -1,12 +1,7 @@
 [
     {
-        "Ip": "audio-dos.gl.at.ply.gg",
-        "Port": "56760",
+        "Ip": "these-learning.gl.at.ply.gg",
+        "Port": "31317",
         "GameName": "Server 1 (Bakım)"
-    },
-    {
-        "Ip": "associates-bills.gl.at.ply.gg",
-        "Port": "51610",
-        "GameName": "Server 2 (Bakım)"
     }
 ]
