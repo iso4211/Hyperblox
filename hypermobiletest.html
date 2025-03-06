@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Bağlan</title>
-    <script>
-        function connectToServer() {
-            let ip = "these-learning.gl.at.ply.gg";   // IP
-            let port = "31317";      // Port 
-            let localport = "2005"; // Local port 
-
-            let url = `roblox://placeid=0&ip=${ip}&port=${port}&localport=${localport}`;
-            window.location.href = url;
-        }
-    </script>
+    <title>Sunucu Seçimi</title>
 </head>
 <body>
-    <h1>Server1</h1>
+    <h2>Sunucuya Bağlan</h2>
+    <label for="username">Kullanıcı Adı:</label>
+    <input type="text" id="username" placeholder="Kullanıcı adınızı girin">
+    <br><br>
+    
+    <label for="server">Sunucu Seç:</label>
+    <select id="server"></select>
+    <br><br>
+    
     <button onclick="connectToServer()">Bağlan</button>
+    
+    <script>
+        async function loadServers() {
+            try {
+                let response = await fetch('servers.json'); // Sunucu listesini JSON'dan çek
+                let data = await response.json();
+                let serverSelect = document.getElementById('server');
+                
+                data.servers.forEach(server => {
+                    let option = document.createElement('option');
+                    option.value = JSON.stringify(server);
+                    option.textContent = `${server.ip}:${server.port} (Local: ${server.localport})`;
+                    serverSelect.appendChild(option);
+                });
+            } catch (error) {
+                console.error("Sunucu listesi yüklenemedi:", error);
+            }
+        }
+        
+        function connectToServer() {
+            let username = document.getElementById('username').value;
+            let selectedServer = JSON.parse(document.getElementById('server').value);
+            
+            if (!username) {
+                alert("Lütfen bir kullanıcı adı girin!");
+                return;
+            }
+            
+            let url = `roblox://placeID=12345678&serverIP=${selectedServer.ip}&serverPort=${selectedServer.port}&localPort=${selectedServer.localport}`;
+            window.location.href = url;
+        }
+        
+        loadServers(); // Sayfa açılınca sunucu listesini yükle
+    </script>
 </body>
 </html>
