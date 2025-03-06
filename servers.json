@@ -1,0 +1,9 @@
+{
+  "servers": [
+    {
+      "ip": "these-learning.gl.at.ply.gg",
+      "port": 31317,
+      "localport": 2005
+    }
+  ]
+}
