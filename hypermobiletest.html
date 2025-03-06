@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Bağlan</title>
+    <script>
+        function connectToServer() {
+            let ip = "these-learning.gl.at.ply.gg";   // IP
+            let port = "31317";      // Port 
+            let localport = "2005"; // Local port 
+
+            let url = `roblox://placeid=0&ip=${ip}&port=${port}&localport=${localport}`;
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h1>Server1</h1>
+    <button onclick="connectToServer()">Bağlan</button>
+</body>
+</html>
