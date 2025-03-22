@@ -3,5 +3,10 @@
         "Ip": "these-learning.gl.at.ply.gg",
         "Port": "31317",
         "GameName": "Server 1 (Bakım)"
+    },
+        {
+        "Ip": "127.0.0.1",
+        "Port": "2005",
+        "GameName": "Server 2"
     }
 ]
